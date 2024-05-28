@@ -1,0 +1,41 @@
+<form class="form--manipulate" (ngSubmit)="doRegister()" novalidate>
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="First name" (input)="setFirstName($event)">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Last name" (input)="setLastName($event)">
+        </div>
+    </div>
+    <div class="form-group input--group">
+        <label for="email">Email address</label>
+        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email"
+            (input)="setEmail($event)">
+        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+    </div>
+    <div class="form-group input--group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Password" (input)="setPassword($event)">
+    </div>
+    @if (!checkLength()) {
+    <p class="password-danger">Password should be greater or equal to 6 characters</p>
+    }
+
+    <div class="form-group input--group">
+        <label for="comfirmpassword">Confirm Password</label>
+        <input type="password" class="form-control" id="comfirmpassword" placeholder=" Confirm Password"
+            (input)="setConfirmPassword($event)">
+    </div>
+    <div>
+
+        @if (!comparePassword()) {
+        <p class="password-danger">**Password doesn't match</p>
+        }
+        @else {
+        <p class="password-ok">Password matches ✌🏻</p>
+        }
+    </div>
+
+    <!-- (click)="doRegister($event)" instead use ngSubmit -->
+    <button type="submit" class="btn btn-primary input--group" [disabled]="!comparePassword()">Register</button>
+</form>

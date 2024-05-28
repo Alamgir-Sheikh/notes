@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes | Home</title>
+</head>
+
+<body>
+    <h1 class="title--note">Welcome to Notes App</h1>
+    <div class="parent-container">
+        <div class="card-container">
+            <div class="container--reg-sign">
+                <div class="tab">
+                    <p (click)="register()">Register</p>
+                </div>
+                <div class="tab">
+                    <p (click)="login()">Log In</p>
+                </div>
+            </div>
+            <div class="form-internal">
+                @if (isReg){
+                <app-register></app-register>
+                }
+                @else{
+                <app-login></app-login>
+                <!-- HEllo -->
+                }
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

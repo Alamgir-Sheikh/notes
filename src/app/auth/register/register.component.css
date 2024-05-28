@@ -1,0 +1,23 @@
+.form--manipulate {
+    padding: 10px;
+}
+
+.input--group{
+    margin-bottom: 8px;
+}
+
+label {
+    color: #ce4760;
+}
+
+.password-danger{
+    font-size: 12px;
+    font-family: 'Courier New', Courier, monospace;
+    color: red;
+}
+
+.password-ok{
+    font-size: 12px;
+    font-family: 'Courier New', Courier, monospace;
+    color: green;
+}
