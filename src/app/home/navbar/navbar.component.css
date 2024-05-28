@@ -1,5 +1,4 @@
-.flex-container{
+.flex-container {
     display: flex;
-    align-content: end;
-    justify-content: end;
+    justify-items: self-start;
 }
